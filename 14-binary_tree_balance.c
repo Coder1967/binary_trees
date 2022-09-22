@@ -29,7 +29,7 @@ size_t tree_nodes(const binary_tree_t *tree)
 
 	if (!tree)
 		return (0);
-        left_n = tree_nodes(tree->left);
+	left_n = tree_nodes(tree->left);
 	right_n = tree_nodes(tree->right);
 	if (left_n >= right_n)
 		return (left_n + 1);
