@@ -6,7 +6,7 @@
  */
 int binary_tree_balance(const binary_tree_t *tree)
 {
-	int left, right, count;
+	int left = 0, right = 0;
 
 	if (tree == NULL)
 		return (0);
@@ -15,14 +15,13 @@ int binary_tree_balance(const binary_tree_t *tree)
 	left = tree_nodes(tree->left);
 	right = tree_nodes(tree->right);
 
-	count = left - right;
-	return (count);
+	return (left - right);
 }
 
 /**
  * tree_nodes - counts the number of nodes to the longest leaf
  * @tree: pointer to the root node of the tree
- * Return: height
+ * Return: height of the binary tree
  */
 size_t tree_nodes(const binary_tree_t *tree)
 {
